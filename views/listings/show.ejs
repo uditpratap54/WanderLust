@@ -5,13 +5,13 @@
     </div>
 
         <div class="card col-6 offset-3 show-card">
-            <img src="<%= listing.image.url %>" class="card-img-top show-img" alt="listing_image">
+            <img src="<%= listing.image %>" class="card-img-top show-img" alt="listing_image">
         <div class="card-body">
             <h5 class="card-title"><%= listing.title %></h5>
             <p class="card-text"></p>
             <%= listing.title %>
             <%= listing.description %>
-            &#8377;<%= listing.price.toLocaleString("en-IN") %> / night <br>
+            &#8377;<%= listing.price?.toLocaleString("en-IN") || "0" %> / night <br>
             <%= listing.country %>
             <%= listing.location %>
         </div>
