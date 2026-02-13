@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const { create } = require("./listing");
 const Schema = mongoose.Schema;
 
-const reviewSchema = new Schema({
+const reviewSchema = new mongoose.Schema({
     comment: String,
     rating: {
         type: Number,
